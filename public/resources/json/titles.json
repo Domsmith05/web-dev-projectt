@@ -1,0 +1,26 @@
+{
+    "buttons" : {
+        "home" : "Home",
+        "city" : "Goal 1 : Cities",
+        "energy" : "Goal 2 : Energy",
+        "water" : "Goal 3 : Water",
+        "team" : "Team",
+        "form" : "Signup form"
+    },
+    "mobileButtons" : {
+        "home" : "🏠",
+        "city" : "🏙️",
+        "energy" : "☢️",
+        "water" : "🐟",
+        "team" : "🙏",
+        "form" : "📄"
+    },
+    "form": {
+        "title": "Contact Form",
+        "firstName": "First Name",
+        "secondName": "Last Name",
+        "email": "Email",
+        "message": "Message",
+        "required": "Required field"
+    }
+}

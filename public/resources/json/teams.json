@@ -1,0 +1,36 @@
+{
+    "heading": "Team information",
+    "members": [
+        {
+            "id": "A",
+            "name": "Abigail",
+            "role": "JSON and content",
+            "image": "resources/images/abbie.jpg",
+            "work": [
+                "Loading and formatting of the home page content using the fetch method.",
+                "Storing the content using JSON files"
+            ]
+        },
+        {
+            "id": "B",
+            "name": "George",
+            "role": "Frontend/Backend",
+            "image": "resources/images/george.jpg",
+            "work": [
+                "3D interactive background using the three.js library and blender",
+                "HTML and CSS",
+                "Email confirmation system using the email.js service"
+            ]
+        },
+        {
+            "id": "C",
+            "name": "Dom",
+            "role": "Backend",
+            "image": "resources/images/dom.jpg",
+            "work": [
+                "Form handling using POST",
+                "Client-side form validation"
+            ]
+        }
+    ]
+}

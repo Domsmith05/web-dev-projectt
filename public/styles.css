@@ -1,0 +1,355 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS Used for the @keyframe, display:sticky, z-index and animation properties*/
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif, Arial;
+    color: #3F2860;
+    background-color: #EFF4F7;
+    font-size:  16px;
+    line-height: 1.5;
+    height: 1000px;
+}
+
+main{
+    overflow: hidden;
+}
+
+p {
+    white-space: pre-wrap;
+}
+
+#desktopNav{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: block;
+}
+
+#mobileNav{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: none;
+}
+
+header {
+    text-align: center;
+    height: 50px;
+}
+
+nav{
+    text-align: center;
+    height: 50px;
+    backdrop-filter: blur(15px);
+    border-bottom: white;
+}
+
+nav ul li{
+    display: inline-block;
+    background-color: #EFF4F7;
+    padding-bottom: 0px;
+    font-size: 100%;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 50px;  
+}
+
+nav ul li:hover {
+    font-size: 120%;
+    cursor:pointer;
+}
+
+.activeNav{
+    background-color: #Ebf2fa;
+}
+
+section{
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid #Ebf2fa;
+    padding: 30px;
+    border-radius: 20px;
+    height: auto;
+}
+
+article{
+    border-radius: 20px;
+}
+
+.activePanel {
+    float: right;
+    margin: 30px;
+    width: 40%;
+    animation-duration: 1s;
+    animation-name: slide-in;
+}
+
+.hiddenPanel {
+    float: right;
+    height: 30px;
+    width: 40%;
+    display: none;
+}
+
+/* CSS validator will say this is wrong, but that is just a bug with the validation service. All of the translate properties function properly*/
+@keyframes slide-in {
+    from {
+        translate: 150vw 0;
+    }
+  
+    to {
+        translate: 0 0;
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        translate: 0 300vw;
+    }
+  
+    to {
+        translate: 0 0;
+    }
+}
+
+#homePanel {
+    border-color: #a2c7ff;
+}
+
+#cityPanel {
+    border-color: #ffa155;
+}
+
+#energyPanel {
+    border-color: #95ff64;
+}
+
+#waterPanel {
+    border-color: #4ebeff;
+}
+
+#teamPanelA:not(.hiddenPanel) {
+    border-color: #ff8282;
+    width: 25%;
+    margin: 1%;
+    padding: 1%;
+    float: none;
+    display: inline-block;
+}
+
+#teamPanelB:not(.hiddenPanel) {
+    border-color: #ff8282;
+    animation-duration: 2s;
+    width: 25%;
+    float:none;
+    margin: 1%;
+    padding: 1%;
+    display: inline-block;
+}
+
+#teamPanelC:not(.hiddenPanel) {
+    border-color: #ff8282;
+    float:none;
+    animation-duration: 3s;
+    width: 25%;
+    margin: 1%;
+    padding: 1%;
+    display: inline-block;
+}
+
+#teamContainer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#formPanel {
+    border-color: #c6a2ff;
+}
+
+.homeContent {
+    background-color: #a2c7ff;
+    margin-bottom: 20px;
+}
+
+.homeContent {
+    background-color: #a2c7ff;
+    margin-bottom: 20px;
+}
+
+.cityContent {
+    background-color: #ffa155;
+    margin-bottom: 20px;
+}
+
+.energyContent {
+    background-color: #95ff64;
+    margin-bottom: 20px;
+}
+
+.waterContent {
+    background-color: #4ebeff;
+    margin-bottom: 20px;
+}
+
+.teamContent {
+    background-color: #ff8282;
+    margin-bottom: 20px;
+    min-height: 450px;
+}
+
+#formConfirmationContent {
+    background-color: #95ff64;
+    animation-duration: 1s;
+    animation-name: slide-in;
+    margin-top: 20px;
+}
+
+#homeLi:hover, #homeLi:has(.activeNav), #homeLi > #homeButton.activeNav, #homeLiMobile:hover, #homeLiMobile:has(.activeNav), #homeLiMobile > #homeButtonMobile.activeNav{
+    background-color: #a2c7ff;
+}
+
+#cityLi:hover, #cityLi:has(.activeNav), #cityLi > #cityButton.activeNav, #cityLiMobile:hover, #cityLiMobile:has(.activeNav), #cityLiMobile > #cityButtonMobile.activeNav{
+    background-color: #ffa155;
+}
+
+#energyLi:hover, #energyLi:has(.activeNav), #energyLi > #energyButton.activeNav, #energyLiMobile:hover, #energyLiMobile:has(.activeNav), #energyLiMobile > #energyButtonMobile.activeNav{
+    background-color: #95ff64;
+}
+
+#waterLi:hover, #waterLi:has(.activeNav), #waterLi > #waterButton.activeNav, #waterLiMobile:hover, #waterLiMobile:has(.activeNav), #waterLiMobile > #waterButtonMobile.activeNav{
+    background-color: #4ebeff;
+}
+
+#teamLi:hover, #teamLi:has(.activeNav), #teamLi > #teamButton.activeNav, #teamLiMobile:hover, #teamLiMobile:has(.activeNav), #teamLiMobile > #teamButtonMobile.activeNav{
+    background-color: #ff8282;
+}
+
+#formLi:hover, #formLi:has(.activeNav), #formLi > #formButton.activeNav, #formLiMobile:hover, #formLiMobile:has(.activeNav), #formLiMobile > #formButtonMobile.activeNav{
+    background-color: #c6a2ff;
+}
+
+.submitButton:hover{
+    background-color: #883eff;
+}
+
+.hiddenContent {
+    display: none;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #069;
+    cursor: pointer;
+}
+
+#form {
+    text-align: center;
+}
+
+#formContent{
+    width: 100%;
+    background-color: #c6a2ff;
+    border-radius: 20px;
+}
+
+input, textarea{
+    display: block;
+    width: 50%;
+    height: 15px;
+    margin: 10px auto;
+}
+
+label {
+    background-color: #ac79ff;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+label.required::after {
+    content: "*";
+    color: red;
+}
+
+.required-asterisk::before {
+    content: "*";
+    color: red;
+}
+
+textarea{
+    resize: none;
+}
+
+.submitButton {
+    width: 30%;
+    height: fit-content;
+    background-color: #ac79ff;
+    border:none;
+    padding:2px 0px;
+}
+
+img {
+    border-radius: 20px;
+    margin: 20px 0px;
+    max-width: 90%;
+}
+
+ol.inside-marker {
+    list-style-position: inside;
+}
+
+@media only screen and (max-width:785px){
+    #desktopNav {
+        display: none;
+    }
+
+    #mobileNav {
+        display: block;
+    }
+
+    nav ul li a{
+        font-size: 0;
+    }
+
+    nav ul li button{
+        padding: 15px;
+    }
+
+    .activePanel, #teamPanelA:not(.hiddenPanel), #teamPanelB:not(.hiddenPanel), #teamPanelC:not(.hiddenPanel) {
+        float: none;
+        margin: auto;
+        min-width: 80%;
+        animation-duration: 4.5s;
+        animation-name: slide-in-bottom;
+        padding-top: 5px;
+        display:block;
+        margin-top : 10px;
+    }
+
+    #teamContainer {
+        display:grid;
+    }
+
+    #formPanel, #formConfirmationContent {
+        animation-duration: 1s;
+        animation-name: slide-in;
+    }
+
+    .hiddenPanel {
+        float: none;
+        width: 40%;
+        display: none;
+    }
+}

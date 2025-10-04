@@ -1,0 +1,97 @@
+<!--https://developer.mozilla.org/en-US/docs/Web/HTML used for the favicon-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/resources/images/favicon.ico">
+    <title>UN sustainable development</title>
+</head>
+<body>
+    <canvas id="background"></canvas>
+    <nav id="desktopNav">
+        <ul>
+            <li id="homeLi"><button id="homeButton" class="activeNav"><span id="homeButtonTitle"></span></button></li>
+            <li id="cityLi"><button id="cityButton"><span id="cityButtonTitle"></span></button></li>
+            <li id="energyLi"><button id="energyButton"><span id="energyButtonTitle"></span></button></li>
+            <li id="waterLi"><button id="waterButton"><span id="waterButtonTitle"></span></button></li>
+            <li id="teamLi"><button id="teamButton"><span id="teamButtonTitle"></span></button></li>
+            <li id="formLi"><button id="formButton"><span id="formButtonTitle"></span></button></li>
+        </ul>
+    </nav>
+    <nav id="mobileNav">
+        <ul>
+            <li id="homeLiMobile"><button id="homeButtonMobile" class="activeNav"><span id="homeButtonTitleMobile"></span></button></li>
+            <li id="cityLiMobile"><button id="cityButtonMobile"><span id="cityButtonTitleMobile"></span></button></li>
+            <li id="energyLiMobile"><button id="energyButtonMobile"><span id="energyButtonTitleMobile"></span></button></li>
+            <li id="waterLiMobile"><button id="waterButtonMobile"><span id="waterButtonTitleMobile"></span></button></li>
+            <li id="teamLiMobile"><button id="teamButtonMobile"><span id="teamButtonTitleMobile"></span></button></li>
+            <li id="formLiMobile"><button id="formButtonMobile"><span id="formButtonTitleMobile"></span></button></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="homePanel" class="activePanel">
+            <article class="homeContent" id="homeContentA"></article>
+            <article class="homeContent" id="homeContentB"></article>
+        </section>
+        <section id="cityPanel" class="hiddenPanel">
+            <article class="cityContent" id="cityContentA"></article>
+            <article class="cityContent" id="cityContentB"></article>
+        </section>
+        <section id="energyPanel" class="hiddenPanel">
+            <article class="energyContent" id="energyContentA"></article>
+            <article class="energyContent" id="energyContentB"></article>
+        </section>
+        <section id="waterPanel" class="hiddenPanel">
+            <article class="waterContent" id="waterContentA"></article>
+            <article class="waterContent" id="waterContentB"></article>
+        </section>
+        <div id="teamContainer">
+            <section id="teamPanelA" class="hiddenPanel">
+                <article class="teamContent" id="teamContentA">
+                </article>
+            </section>
+            <section id="teamPanelB" class="hiddenPanel">
+                <article class="teamContent" id="teamContentB">
+                </article>
+            </section>
+            <section id="teamPanelC" class="hiddenPanel">
+                <article class="teamContent" id="teamContentC">
+                </article>
+            </section>
+        </div>
+        <section id="formPanel" class="hiddenPanel">
+            <form id="form">
+                <article id="formContent">
+                    <h3 id="formTitle"></h3>
+                    
+                    <label class="required" id="formFirstNameTitle"></label>
+                    <input type="text" required id="formFirstName" name="firstName">
+
+                    <label class="required" id="formSecondNameTitle"></label>
+                    <input type="text" required id="formSecondName" name="secondName">
+
+                    <label class="required" id="formEmailTitle"></label>
+                    <input type="email" required id="formEmail" name="email">
+
+                    <label class="required" id="formMessageTitle"></label>
+                    <textarea required id="formMessage" name="message"></textarea>
+
+                    <input type="submit" value="Send" class="submitButton" id="submitButton">
+                    <p id="formRequiredTitle" class="required-asterisk"></p>
+                </article>
+            </form>
+            <article id="formConfirmationContent" class="hiddenContent">
+                <h2 id="formConfirmationHeader"></h2>
+                <p id="formConfirmationText"></p>
+            </article>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="bundle.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</body>
+</html>

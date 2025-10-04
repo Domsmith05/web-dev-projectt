@@ -1,0 +1,45 @@
+{
+  "name": "webdev-project",
+  "version": "1.0.0",
+  "description": "Project for Web-based programming",
+  "main": "./public/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch",
+    "start": "node server.cjs",
+    "build": "webpack"
+  },
+  "author": "George Gorman",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "cors": "^2.8.5",
+    "css": "^3.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "file-loader": "^6.2.0",
+    "glsl": "^0.0.1",
+    "json": "^11.0.0",
+    "three": "^0.170.0",
+    "twilio": "^5.3.5",
+    "url-loader": "^4.1.1",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.9.1",
+    "child_process": "^1.0.2",
+    "concurrently": "^9.1.0",
+    "css-loader": "^7.1.2",
+    "esbuild": "^0.24.0",
+    "http-server": "^14.1.1",
+    "jest-worker": "^29.7.0",
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "nodemon": "^3.1.7",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "uglify-js": "^3.19.3",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "type": "module"
+}
