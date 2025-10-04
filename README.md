@@ -1,7 +1,7 @@
 # Web Development Project
 
 ## Overview
-This is a web-based programming project developed as part of a coursework assignment. The application uses Node.js with Webpack to bundle frontend resources and serves a static site with custom JavaScript and styling.
+This is a web-based group programming project developed as part of a coursework assignment. The application uses Node.js with Webpack to bundle frontend resources and serves a static site with custom JavaScript and styling.
 
 ## Features
 - Node.js server (`server.cjs`)
